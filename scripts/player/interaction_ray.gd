@@ -14,6 +14,7 @@ func _physics_process(_delta: float) -> void:
 
 
 func try_to_pick_up_item(item: ItemPickup):
-	var item_data = item.pick_up()
-	inventory.add_item(item_data)
+	if !inventory.is_full():
+		var item_data = item.pick_up()
+		inventory.add_item(item_data)
 	

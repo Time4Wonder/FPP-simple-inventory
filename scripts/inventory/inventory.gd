@@ -16,7 +16,7 @@ func _ready() -> void:
 func add_item(item: ItemData):
 	for i in range(items.size()): 
 		if items[i] == null:
-			items[i] == item
+			items[i] = item
 			inventory_updated.emit(item)
 			break
 	print(items)
@@ -33,3 +33,8 @@ func switchItem():
 	inventory_updated.emit()
 	print(items)
 	
+func is_full() -> bool:
+	for i in items:
+		if i == null:
+			return false
+	return true
