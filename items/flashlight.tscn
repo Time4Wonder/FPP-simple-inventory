@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dixld0q5a7qda"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_2dmr6"]
+top_radius = 0.05
+bottom_radius = 0.05
+height = 0.2
+
+[node name="Flashlight" type="MeshInstance3D"]
+mesh = SubResource("CylinderMesh_2dmr6")

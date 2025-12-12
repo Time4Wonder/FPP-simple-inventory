@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://cnt808fskfi32"]
+
+[ext_resource type="Script" uid="uid://085o4kvc1bsd" path="res://scripts/inventory/item_pickup.gd" id="1_prgrc"]
+[ext_resource type="Resource" uid="uid://bd4pjyyv2xqh6" path="res://items/flashlight.tres" id="2_wgnby"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5y1tf"]
+size = Vector3(0.45141602, 1, 0.4453125)
+
+[node name="ItemPickup" type="RigidBody3D"]
+script = ExtResource("1_prgrc")
+item_data = ExtResource("2_wgnby")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.42158937, 0, 0, 0, 0.42158937, 0, 0, 0, 0.42158937, 0, 0, 0.04663086)
+shape = SubResource("BoxShape3D_5y1tf")
