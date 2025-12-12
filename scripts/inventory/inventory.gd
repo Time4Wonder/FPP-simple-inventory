@@ -26,8 +26,6 @@ func drop_item_current_item():
 	inventory_updated.emit()
 	print(items)
 	
-	
-
 func switchItem():
 	current_slot_index += 1
 	inventory_updated.emit()

@@ -1,12 +1,14 @@
 extends CanvasLayer
 
-@onready var inventory: Node = $"../../Inventory"
+# A ref needed of the inventory (logic) node in the player character 
+@export var inventory: Node
+@onready var h_box_container: HBoxContainer = $Control/HBoxContainer
 
 func _ready() -> void:
 	if inventory:
 		inventory.inventory_updated.connect(update_ui)
 		update_ui()
 	else: 
-		print("achtung ui hat keine verbindung zum inventar")
+		print("WARNING: UI is not connected to the Inventory.")
 func update_ui():
 	pass
