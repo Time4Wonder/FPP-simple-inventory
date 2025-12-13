@@ -22,12 +22,24 @@ func _unhandled_input(event: InputEvent) -> void:
 			current_slot_index += 1
 	inventory_updated.emit()
 	
-		
 	if event.is_action_pressed("hotbar_previous"):
 		if current_slot_index <= 0:
 			current_slot_index = items.size() - 1 
 		else:
 			current_slot_index -= 1
+		inventory_updated.emit()
+		
+	if event.is_action_pressed("hotbar_1"):
+		current_slot_index = 0
+		inventory_updated.emit()
+	if event.is_action_pressed("hotbar_2"):
+		current_slot_index = 1
+		inventory_updated.emit()
+	if event.is_action_pressed("hotbar_3"):
+		current_slot_index = 2
+		inventory_updated.emit()
+	if event.is_action_pressed("hotbar_4"):
+		current_slot_index = 3
 		inventory_updated.emit()
 
 
