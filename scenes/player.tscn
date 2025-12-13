@@ -38,5 +38,5 @@ script = ExtResource("2_g2els")
 
 [node name="HUD" type="CanvasLayer" parent="."]
 
-[node name="Inventory2" parent="HUD" node_paths=PackedStringArray("inventory") instance=ExtResource("4_dqkch")]
+[node name="Inventory" parent="HUD" node_paths=PackedStringArray("inventory") instance=ExtResource("4_dqkch")]
 inventory = NodePath("../../Inventory")

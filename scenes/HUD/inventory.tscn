@@ -1,6 +1,54 @@
-[gd_scene load_steps=2 format=3 uid="uid://c7ukoi3s1aofp"]
+[gd_scene load_steps=6 format=3 uid="uid://c7ukoi3s1aofp"]
 
 [ext_resource type="Script" uid="uid://u57d5kredb0p" path="res://scripts/inventory/inventory_hud.gd" id="1_i6oyy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_57i7g"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2mxmm"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ixgds"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i6oyy"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
 
 [node name="Inventory" type="CanvasLayer"]
 script = ExtResource("1_i6oyy")
@@ -32,6 +80,7 @@ metadata/_edit_use_anchors_ = true
 [node name="Slot1" type="Panel" parent="Control/HBoxContainer"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_57i7g")
 
 [node name="TextureRect" type="TextureRect" parent="Control/HBoxContainer/Slot1"]
 layout_mode = 1
@@ -46,10 +95,12 @@ offset_right = 20.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
+expand_mode = 1
 
 [node name="Slot2" type="Panel" parent="Control/HBoxContainer"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_2mxmm")
 
 [node name="TextureRect" type="TextureRect" parent="Control/HBoxContainer/Slot2"]
 layout_mode = 1
@@ -64,10 +115,12 @@ offset_right = 20.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
+expand_mode = 1
 
 [node name="Slot3" type="Panel" parent="Control/HBoxContainer"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ixgds")
 
 [node name="TextureRect" type="TextureRect" parent="Control/HBoxContainer/Slot3"]
 layout_mode = 1
@@ -82,10 +135,12 @@ offset_right = 20.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
+expand_mode = 1
 
 [node name="Slot4" type="Panel" parent="Control/HBoxContainer"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_i6oyy")
 
 [node name="TextureRect" type="TextureRect" parent="Control/HBoxContainer/Slot4"]
 layout_mode = 1
@@ -100,6 +155,7 @@ offset_right = 20.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
+expand_mode = 1
 
 [node name="CrosshairDeleteMe" type="ColorRect" parent="Control"]
 layout_mode = 1
