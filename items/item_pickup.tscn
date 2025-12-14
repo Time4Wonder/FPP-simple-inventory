@@ -7,13 +7,13 @@
 script = ExtResource("2_wgnby")
 metadata/_custom_type_script = "uid://cr248iofswott"
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_5y1tf"]
-size = Vector3(0.45141602, 1, 0.4453125)
+[sub_resource type="SphereShape3D" id="SphereShape3D_wgnby"]
+radius = 0.15
 
 [node name="ItemPickup" type="RigidBody3D"]
+mass = 0.001
 script = ExtResource("1_prgrc")
 item_data = SubResource("Resource_wftjm")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.42158937, 0, 0, 0, 0.42158937, 0, 0, 0, 0.42158937, 0, 0, 0.04663086)
-shape = SubResource("BoxShape3D_5y1tf")
+shape = SubResource("SphereShape3D_wgnby")

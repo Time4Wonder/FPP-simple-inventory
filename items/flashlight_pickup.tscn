@@ -1,16 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://puy1mmscpmbw"]
+[gd_scene load_steps=3 format=3 uid="uid://puy1mmscpmbw"]
 
 [ext_resource type="PackedScene" uid="uid://cnt808fskfi32" path="res://items/item_pickup.tscn" id="1_2tjlx"]
-[ext_resource type="Texture2D" uid="uid://bawv26fnrwdoo" path="res://icon.svg" id="2_mwf5h"]
-[ext_resource type="PackedScene" uid="uid://cy8fntry5gtuv" path="res://models/flashlight.glb" id="3_2tjlx"]
-[ext_resource type="Script" uid="uid://cr248iofswott" path="res://scripts/inventory/item_data.gd" id="4_ydtjr"]
-
-[sub_resource type="Resource" id="Resource_u5n8p"]
-script = ExtResource("4_ydtjr")
-name = "Flashlight"
-icon = ExtResource("2_mwf5h")
-model = ExtResource("3_2tjlx")
-metadata/_custom_type_script = "uid://cr248iofswott"
+[ext_resource type="Resource" uid="uid://bd4pjyyv2xqh6" path="res://items/flashlight.tres" id="2_g5jsx"]
 
 [node name="FlashlightPickup" instance=ExtResource("1_2tjlx")]
-item_data = SubResource("Resource_u5n8p")
+item_data = ExtResource("2_g5jsx")

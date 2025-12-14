@@ -13,3 +13,5 @@ func update_hand_model(item: ItemData):
 	if item != null:
 		var new_model = item.model.instantiate()
 		add_child(new_model)
+		new_model.rotation += item.rotation_offset
+		new_model.position += item.position_offset

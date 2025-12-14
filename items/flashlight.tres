@@ -1,29 +1,16 @@
 [gd_resource type="Resource" script_class="ItemData" load_steps=5 format=3 uid="uid://bd4pjyyv2xqh6"]
 
 [ext_resource type="Texture2D" uid="uid://bawv26fnrwdoo" path="res://icon.svg" id="1_2opa4"]
+[ext_resource type="Shape3D" uid="uid://drjvo5bin4gur" path="res://items/flashlight_collisionshape.tres" id="1_cxhdo"]
 [ext_resource type="Script" uid="uid://cr248iofswott" path="res://scripts/inventory/item_data.gd" id="1_twf4v"]
-
-[sub_resource type="CylinderMesh" id="CylinderMesh_2dmr6"]
-top_radius = 0.05
-bottom_radius = 0.05
-height = 0.2
-
-[sub_resource type="PackedScene" id="PackedScene_bn465"]
-_bundled = {
-"conn_count": 0,
-"conns": PackedInt32Array(),
-"editable_instances": [],
-"names": PackedStringArray("Flashlight", "MeshInstance3D", "mesh"),
-"node_count": 1,
-"node_paths": [],
-"nodes": PackedInt32Array(-1, -1, 1, 0, -1, 1, 2, 0, 0),
-"variants": [SubResource("CylinderMesh_2dmr6")],
-"version": 3
-}
+[ext_resource type="PackedScene" uid="uid://cy8fntry5gtuv" path="res://models/flashlight.glb" id="2_2yxpk"]
 
 [resource]
 script = ExtResource("1_twf4v")
 name = "Flashlight"
 icon = ExtResource("1_2opa4")
-model = SubResource("PackedScene_bn465")
+model = ExtResource("2_2yxpk")
+collision_shape = ExtResource("1_cxhdo")
+rotation_offset = Vector3(-1.5, 0, 0)
+position_offset = Vector3(0, 0, 0.1)
 metadata/_custom_type_script = "uid://cr248iofswott"
