@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://dmx8273l6hphr"]
+[gd_scene load_steps=8 format=3 uid="uid://dmx8273l6hphr"]
 
 [ext_resource type="Script" uid="uid://cer86hy6lxap0" path="res://scripts/player/player.gd" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://cv8q3pcmlpur3" path="res://scripts/inventory/inventory.gd" id="2_g2els"]
 [ext_resource type="Script" uid="uid://cmnvupo8aj11q" path="res://scripts/player/interaction_ray.gd" id="2_qhqgy"]
+[ext_resource type="Script" uid="uid://bqwgkanur86rw" path="res://scenes/hand_position.gd" id="3_qlg0r"]
 [ext_resource type="PackedScene" uid="uid://c7ukoi3s1aofp" path="res://scenes/HUD/inventory.tscn" id="4_dqkch"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_3vyb7"]
@@ -29,6 +30,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4, 0)
 target_position = Vector3(0, 0, -3)
 script = ExtResource("2_qhqgy")
 
+[node name="HandPosition" type="Marker3D" parent="Head/Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, -0.5, -0.6)
+script = ExtResource("3_qlg0r")
+
 [node name="HeadBonker" type="RayCast3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1, 0)
 target_position = Vector3(0, 1, 0)
@@ -40,3 +45,28 @@ script = ExtResource("2_g2els")
 
 [node name="Inventory" parent="HUD" node_paths=PackedStringArray("inventory") instance=ExtResource("4_dqkch")]
 inventory = NodePath("../../Inventory")
+
+[node name="Control" type="Control" parent="HUD"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="HUD/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1.5
+offset_top = -1.5
+offset_right = 1.5
+offset_bottom = 1.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2

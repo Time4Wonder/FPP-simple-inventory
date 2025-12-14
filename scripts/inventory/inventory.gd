@@ -7,6 +7,7 @@ var items: Array[ItemData] = []
 var current_slot_index = 0
 
 signal inventory_updated # Signal to the UI
+signal current_item_changed(item: ItemData) #signal for the object rendering while holding
 
 func _ready() -> void:
 	items.resize(max_slots)
@@ -17,30 +18,24 @@ func _unhandled_input(event: InputEvent) -> void:
 		
 	if event.is_action_pressed("hotbar_next"):
 		if current_slot_index >= items.size() - 1:
-			current_slot_index = 0
+			set_current_slot_index(0)
 		else:
-			current_slot_index += 1
-	inventory_updated.emit()
+			set_current_slot_index(current_slot_index + 1)
 	
 	if event.is_action_pressed("hotbar_previous"):
 		if current_slot_index <= 0:
-			current_slot_index = items.size() - 1 
+			set_current_slot_index(items.size() - 1)
 		else:
-			current_slot_index -= 1
-		inventory_updated.emit()
+			set_current_slot_index(current_slot_index - 1)
 		
 	if event.is_action_pressed("hotbar_1"):
-		current_slot_index = 0
-		inventory_updated.emit()
+		set_current_slot_index(0)
 	if event.is_action_pressed("hotbar_2"):
-		current_slot_index = 1
-		inventory_updated.emit()
+		set_current_slot_index(1)
 	if event.is_action_pressed("hotbar_3"):
-		current_slot_index = 2
-		inventory_updated.emit()
+		set_current_slot_index(2)
 	if event.is_action_pressed("hotbar_4"):
-		current_slot_index = 3
-		inventory_updated.emit()
+		set_current_slot_index(3)
 
 
 func add_item(item: ItemData):
@@ -51,13 +46,13 @@ func add_item(item: ItemData):
 			if items[i] == null:
 				items[i] = item
 				inventory_updated.emit()
+				current_item_changed.emit(items[current_slot_index])
 				break
+	inventory_updated.emit()
+	current_item_changed.emit(items[current_slot_index])
 	
 func drop_item_current_item():
 	if items[current_slot_index] != null:
-
-		
-		
 		var drop: RigidBody3D = ITEM_PICKUP.instantiate()
 		drop.item_data = items[current_slot_index]
 		
@@ -74,10 +69,12 @@ func drop_item_current_item():
 		
 		items[current_slot_index] = null
 		inventory_updated.emit()
+		current_item_changed.emit(items[current_slot_index])
 	
-func switchItem():
-	current_slot_index += 1
+func set_current_slot_index(slot):
+	current_slot_index = slot
 	inventory_updated.emit()
+	current_item_changed.emit(items[current_slot_index])
 	
 func is_full() -> bool:
 	for i in items:

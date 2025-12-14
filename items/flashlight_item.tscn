@@ -2,14 +2,14 @@
 
 [ext_resource type="PackedScene" uid="uid://cnt808fskfi32" path="res://items/item_pickup.tscn" id="1_6vevc"]
 [ext_resource type="Texture2D" uid="uid://bawv26fnrwdoo" path="res://icon.svg" id="2_d64gn"]
-[ext_resource type="PackedScene" uid="uid://dixld0q5a7qda" path="res://models/flashlight.tscn" id="3_t7l2r"]
+[ext_resource type="PackedScene" uid="uid://cy8fntry5gtuv" path="res://models/flashlight.glb" id="3_6vevc"]
 [ext_resource type="Script" uid="uid://cr248iofswott" path="res://scripts/inventory/item_data.gd" id="4_kvbab"]
 
 [sub_resource type="Resource" id="Resource_dduq7"]
 script = ExtResource("4_kvbab")
 name = "Flashlight"
 icon = ExtResource("2_d64gn")
-model = ExtResource("3_t7l2r")
+model = ExtResource("3_6vevc")
 metadata/_custom_type_script = "uid://cr248iofswott"
 
 [node name="FlashlightItem" instance=ExtResource("1_6vevc")]
