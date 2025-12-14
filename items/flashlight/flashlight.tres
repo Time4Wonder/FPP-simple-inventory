@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="ItemData" load_steps=5 format=3 uid="uid://bd4pjyyv2xqh6"]
 
 [ext_resource type="Texture2D" uid="uid://bawv26fnrwdoo" path="res://icon.svg" id="1_2opa4"]
-[ext_resource type="Shape3D" uid="uid://drjvo5bin4gur" path="res://items/flashlight_collisionshape.tres" id="1_cxhdo"]
+[ext_resource type="Shape3D" uid="uid://ogd8ad7q6me6" path="res://items/flashlight/flashlight_collision_shape.tres" id="1_iyird"]
 [ext_resource type="Script" uid="uid://cr248iofswott" path="res://scripts/inventory/item_data.gd" id="1_twf4v"]
-[ext_resource type="PackedScene" uid="uid://cy8fntry5gtuv" path="res://models/flashlight.glb" id="2_2yxpk"]
+[ext_resource type="PackedScene" uid="uid://offji8k4tot4" path="res://models/flashlight.glb" id="2_2yxpk"]
 
 [resource]
 script = ExtResource("1_twf4v")
 name = "Flashlight"
 icon = ExtResource("1_2opa4")
 model = ExtResource("2_2yxpk")
-collision_shape = ExtResource("1_cxhdo")
+collision_shape = ExtResource("1_iyird")
 rotation_offset = Vector3(-1.5, 0, 0)
 position_offset = Vector3(0, 0, 0.1)
 metadata/_custom_type_script = "uid://cr248iofswott"
