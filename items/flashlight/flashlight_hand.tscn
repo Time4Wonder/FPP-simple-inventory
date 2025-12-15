@@ -53,5 +53,6 @@ skeleton = NodePath("")
 script = ExtResource("1_aqg6b")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0.11505175, 5.0290714e-09)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0.13017064, 5.689939e-09)
 visible = false
+layers = 3

@@ -5,6 +5,7 @@ class_name ItemData  # <--- GANZ WICHTIG!
 @export var icon: Texture2D
 @export var model: PackedScene
 @export var collision_shape: Shape3D
+@export var mass: float = 1
 
 @export_group("Hand Placement")
 @export var rotation_offset: Vector3 = Vector3.ZERO

@@ -13,6 +13,7 @@ func setup_item():
 		var model = item_data.model.instantiate()
 		add_child(model)
 		collision_shape_3d.shape = item_data.collision_shape
+		mass = item_data.mass
 		
 func pick_up():
 	queue_free()

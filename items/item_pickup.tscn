@@ -7,7 +7,6 @@
 radius = 0.15
 
 [node name="ItemPickup" type="RigidBody3D"]
-mass = 0.001
 script = ExtResource("1_prgrc")
 item_data = ExtResource("2_wgnby")
 
