@@ -24,10 +24,11 @@ func update_hand_model(item: ItemData):
 		new_model.rotation += item.rotation_offset
 		new_model.position += item.position_offset
 		
-		if get_child(0) is HandItem:
-			current_hand_item = get_child(0)
-		else: 
-			current_hand_item = null
+		for i in get_children():
+			if i is HandItem:
+				current_hand_item = i
+			else: 
+				current_hand_item = null
 
 func _set_layer_recursive(node, layer_index):
 	if node is Light3D:
