@@ -1,3 +1,5 @@
+## The Inventory Logic for the player.
+
 extends Node
 
 const ITEM_PICKUP = preload("uid://cnt808fskfi32")

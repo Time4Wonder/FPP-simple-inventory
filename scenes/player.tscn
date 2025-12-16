@@ -1,12 +1,12 @@
 [gd_scene load_steps=10 format=3 uid="uid://dmx8273l6hphr"]
 
 [ext_resource type="Script" uid="uid://cer86hy6lxap0" path="res://scripts/player/player.gd" id="1_3vyb7"]
-[ext_resource type="Script" uid="uid://cv8q3pcmlpur3" path="res://scripts/inventory/inventory.gd" id="2_g2els"]
-[ext_resource type="Script" uid="uid://cmnvupo8aj11q" path="res://scripts/player/interaction_ray.gd" id="2_qhqgy"]
+[ext_resource type="Script" uid="uid://cv8q3pcmlpur3" path="res://InventorySystem/scripts/inventory.gd" id="2_g2els"]
+[ext_resource type="Script" uid="uid://cmnvupo8aj11q" path="res://InventorySystem/scripts/player/interaction_ray.gd" id="2_qhqgy"]
 [ext_resource type="Script" uid="uid://c6chs64rcssrw" path="res://scripts/player/sub_viewport.gd" id="3_fjrip"]
-[ext_resource type="Script" uid="uid://bqwgkanur86rw" path="res://scenes/hand_position.gd" id="3_qlg0r"]
+[ext_resource type="Script" uid="uid://bqwgkanur86rw" path="res://InventorySystem/scripts/player/hand_position.gd" id="3_qlg0r"]
 [ext_resource type="Script" uid="uid://crtqaqeyfdncu" path="res://scripts/player/no_clip_camera.gd" id="3_tuyoq"]
-[ext_resource type="PackedScene" uid="uid://c7ukoi3s1aofp" path="res://scenes/HUD/inventory.tscn" id="4_dqkch"]
+[ext_resource type="PackedScene" uid="uid://c7ukoi3s1aofp" path="res://InventorySystem/HUD/inventory.tscn" id="4_dqkch"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_3vyb7"]
 

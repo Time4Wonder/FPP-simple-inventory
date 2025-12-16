@@ -1,3 +1,5 @@
+## Ressource to represent Items in general.
+
 extends Resource
 class_name ItemData  # <--- GANZ WICHTIG!
 

@@ -1,5 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://puy1mmscpmbw"]
-
-[ext_resource type="PackedScene" uid="uid://cnt808fskfi32" path="res://items/item_pickup.tscn" id="1_2tjlx"]
-
-[node name="FlashlightPickup" instance=ExtResource("1_2tjlx")]

@@ -1,6 +1,8 @@
+## The HUD for the Inventory. 
+
 extends CanvasLayer
 
-# A ref needed of the inventory (logic) node in the player character 
+## A ref needed of the inventory (logic) node in the player character 
 @export var inventory: Node
 @onready var h_box_container: HBoxContainer = $Control/HBoxContainer
 

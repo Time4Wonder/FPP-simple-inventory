@@ -1,3 +1,5 @@
+## A Player Raycast for interacting with Items (Part of the Inventory System)
+
 extends RayCast3D
 
 @onready var inventory: Node = $"../../../Inventory"

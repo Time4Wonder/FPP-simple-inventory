@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://c7ukoi3s1aofp"]
 
-[ext_resource type="Script" uid="uid://u57d5kredb0p" path="res://scripts/inventory/inventory_hud.gd" id="1_i6oyy"]
+[ext_resource type="Script" uid="uid://u57d5kredb0p" path="res://InventorySystem/scripts/inventory_hud.gd" id="1_i6oyy"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_57i7g"]
 content_margin_left = 0.0

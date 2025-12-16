@@ -1,3 +1,5 @@
+## A class for the rendering items into the player hands, while holding an item. Part of the Inventory System.
+
 extends Marker3D
 
 @onready var inventory: Node = $"../../../../../../Inventory"

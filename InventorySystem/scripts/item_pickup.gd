@@ -1,3 +1,5 @@
+## A bluprint class for pickable and physical Items in the world.
+
 extends RigidBody3D
 class_name ItemPickup
 
