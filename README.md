@@ -19,6 +19,3 @@ A lightweight, modular inventory system for **Godot 4.5**, inspired by the mecha
 2. Steal the InventorySystem directory and drop it into your own project. 
 3. It is also recommended to look at the player node to see how it will be implemented.
 4. Customize and enjoy!
-
-### ⚖️ License
-Licensed under the **MIT License**. Use it, change it, "steal" it—do whatever you want with it!
